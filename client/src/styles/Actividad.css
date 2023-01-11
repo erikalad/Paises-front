@@ -1,0 +1,23 @@
+
+
+.titulo-country-id{
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    align-items: center;
+    margin-left:100px;
+    color:white;
+}
+
+
+
+
+.texto-country-id{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+
+    color:white;
+}
+

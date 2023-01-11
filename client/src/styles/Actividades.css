@@ -1,0 +1,15 @@
+.contenedor-actividades{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.42);
+    width: 500px;
+    margin-left:80px;
+    border:1px rgba(255, 255, 255, 0.447) solid;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    height: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}

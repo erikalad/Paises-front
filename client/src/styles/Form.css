@@ -1,0 +1,73 @@
+.form{
+    display: flex;
+    flex-direction: row;
+    color:white;
+    flex-wrap: wrap;
+}
+
+.nombre{
+    display: flex;
+    flex-direction: column;
+    margin: 80px;
+    justify-content: space-between;
+
+}
+
+.paises-elegir{
+  
+    height: 500px;
+    margin-left: 80px;
+}
+
+
+.input-form{
+    margin-top: 5px;
+    border-radius: 20px;
+    height: 30px;
+    background-color:rgba(255, 255, 255, 0.776)
+}
+
+.input-form-boton{
+    margin-left: 1400px;
+    margin-top: 5px;
+    border-radius: 30px;
+    height: 40px;
+    margin-bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.792);
+    color:white;
+    border-color: white;
+}
+
+.input-form-boton:hover{
+    background-color: rgb(255, 255, 0);
+    color:black
+}
+
+.agregar-actividad{
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 40px;
+    align-items: center;
+    margin-left:80px;
+    color:white;
+    
+}
+
+.conteiner-form-elegir{
+    display: flex;
+}
+
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+    border-color: red;
+  }
+
+option.invalid{
+    box-shadow: 0 0 5px 1px red;
+    border-color: red;
+  }
+
+
+::placeholder {
+ padding-left: 6px;
+  }

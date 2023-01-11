@@ -1,0 +1,144 @@
+.menu{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    margin-right: 300px;
+}
+
+
+.menu-title{
+    color:white
+}
+
+.menu-p{
+    color:white;
+    font-size: 15px;
+}
+
+.menu-input{
+    display: flex;
+    flex-direction: row;    
+    align-items: center ;
+    height: 30px;
+}
+
+.paginado{
+    width: 1435px;
+    margin-left: 75px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    margin-left: 80px;
+    width: 1500px;
+    flex-wrap: wrap;
+}
+
+.menu-buscador{
+    
+    border-radius: 20px;
+    height: 30px;
+    margin-bottom: 5px;
+    background-color:rgba(255, 255, 255, 0.776);
+    width: 220px;
+}
+
+.menu-buscador-input{
+    height: 150px;
+    width: 16rem;
+    border:1px white solid;
+    padding-left: 20px;
+}
+
+.menu-buscador-input-gral{
+    height: 570px;
+    width: 16rem;
+    border:1px white solid;
+    padding-left: 20px;
+}
+
+.menu-buscador-input-cont{
+    height: 300px;
+    width: 16rem;
+    border:1px white solid;
+    padding-left: 20px;
+}
+
+.boton-buscar-menu{
+    height: 25px;
+    text-align: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.boton-buscar-menu:hover{
+    background-color: yellow;
+}
+
+
+
+@media (max-width: 800px) {
+
+
+  .menu{
+    
+    margin-right: 0px !important;
+  }
+
+  .cards{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px !important;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 100%;
+}
+
+.paginado{
+    display: none;
+    
+}
+
+.menudefiltros{
+
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content:space-between;
+}
+
+.menu-buscador-input{
+    margin-right: 5px;
+    margin-left: 5px;
+    border:1px white solid;
+}
+
+.menu-buscador-input-cont{
+    margin-right: 5px;
+    margin-left: 5px;
+    border:1px white solid;
+}
+
+.menu-buscador-input-gral{
+    margin-right: 5px;
+    margin-left: 5px;
+    border:1px white solid;
+}
+.menu-input{
+    display: flex;
+    flex-direction: row;    
+    align-items: center ;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+
+}

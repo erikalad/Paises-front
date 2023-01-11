@@ -1,0 +1,46 @@
+.card-small{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-between;
+    height: 40px;
+    border-color: white;
+    border-radius: 20px;
+    background-color: black;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.776);
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.img-card{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    margin-right: 15px;
+    
+}
+
+.smallcountry{
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.boton-agregar{
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 25px;
+    font-size: 30px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.boton-agregar:hover{
+    background-color: rgb(255, 255, 0);
+}

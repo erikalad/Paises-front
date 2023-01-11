@@ -1,0 +1,43 @@
+ul{
+    list-style: none;
+}
+
+.paginado-clase{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 55px;
+   
+}
+
+
+
+.number{
+    margin-left: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.boton-paginado{
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 35px;
+    background-color: white;
+    margin-right: 5px;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.413);
+    cursor: pointer;
+}
+
+.boton-paginado:hover{
+    transform: scale(1.1);
+
+}
+
+.boton-paginado:active{
+    color: rgb(229, 255, 0);
+
+}
+

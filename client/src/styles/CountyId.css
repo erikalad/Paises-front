@@ -1,0 +1,68 @@
+.country{
+    display: flex;
+    color:white;
+    height: 200%
+}
+
+.titulo-country-id{
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    align-items: center;
+    margin-left:100px;
+}
+
+.img-country-id{
+    
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 35px;
+    background-color: white;
+    margin-right: 15px;
+}
+
+.detalle-country-id{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.42);
+    width: 500px;
+    margin-left:100px;
+    border:1px rgba(255, 255, 255, 0.447) solid;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+}
+
+.texto-country-id{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.conteiner-detalle-actividad{
+    display: flex;
+    flex-direction: row;
+}
+
+.actividades-disponibles{
+    margin-left: 20px
+}
+
+.actividad{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.42);
+    width: 500px;
+    margin-left:100px;
+    border:1px rgba(255, 255, 255, 0.447) solid;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    height: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
