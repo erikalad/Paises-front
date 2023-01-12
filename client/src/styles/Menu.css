@@ -24,14 +24,14 @@
 
 .paginado{
     width: 1435px;
-    margin-left: 75px;
+    margin-left: 0px;
 }
 
 .cards{
     display: flex;
     flex-direction: row;
-    margin-left: 80px;
-    width: 1500px;
+    margin-left: 20px;
+    width:100%;
     flex-wrap: wrap;
 }
 
@@ -82,6 +82,7 @@
 .boton-buscar-menu:hover{
     background-color: yellow;
 }
+
 
 
 

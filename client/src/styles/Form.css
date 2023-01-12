@@ -8,15 +8,15 @@
 .nombre{
     display: flex;
     flex-direction: column;
-    margin: 80px;
+    margin: 40px;
     justify-content: space-between;
 
 }
 
 .paises-elegir{
-  
+   
     height: 500px;
-    margin-left: 80px;
+    margin-left: 50px;
 }
 
 
@@ -28,11 +28,11 @@
 }
 
 .input-form-boton{
-    margin-left: 1400px;
-    margin-top: 5px;
+    margin-left: 1200px;
+    margin-top: 0px;
     border-radius: 30px;
     height: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
     background-color: rgba(0, 0, 0, 0.792);
     color:white;
     border-color: white;
@@ -44,13 +44,13 @@
 }
 
 .agregar-actividad{
-    margin-top: 50px;
+    
     font-weight: bold;
     font-size: 40px;
     align-items: center;
-    margin-left:80px;
+    margin-left: 40px;
     color:white;
-    
+    margin-top: 5px;
 }
 
 .conteiner-form-elegir{
