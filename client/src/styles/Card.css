@@ -15,6 +15,7 @@
 .card-titulo{
     display: flex;
     flex-direction: row;
+    
 }
 
 .card-img{
@@ -24,6 +25,7 @@
     border-radius: 35px;
     background-color: white;
     margin-right: 15px;
+    
 }
 
 .card-title{

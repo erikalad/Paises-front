@@ -39,11 +39,11 @@ const CountryId = () => {
         <div className="conteiner-detalle-actividad">
         <div className="detalle-country-id">
         <h1>Detalle del pais</h1>
-        <div  className="texto-country-id"><p>Codigo:</p><p>{countryDetail.id}</p></div>
-        <div  className="texto-country-id"><p>Region:</p><p>{countryDetail.region}</p></div>
-        <div  className="texto-country-id"><p>Subregion: </p><p>{countryDetail.subregion}</p></div>
+        <div  className="texto-country-id"><p>Código:</p><p>{countryDetail.id}</p></div>
+        <div  className="texto-country-id"><p>Región:</p><p>{countryDetail.region}</p></div>
+        <div  className="texto-country-id"><p>Subregión: </p><p>{countryDetail.subregion}</p></div>
         <div  className="texto-country-id"><p>Capital: </p><p>{countryDetail.capital}</p></div>
-        <div  className="texto-country-id"><p>Area: </p><p>{countryDetail.area} Km2</p></div>
+        <div  className="texto-country-id"><p>Área: </p><p>{countryDetail.area} Km2</p></div>
         <div  className="texto-country-id"> <p>Población:</p><p> {countryDetail.poblacion} Hab. </p></div>
         </div>
         <div className='actividad'>

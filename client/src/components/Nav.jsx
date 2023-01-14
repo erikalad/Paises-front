@@ -11,7 +11,7 @@ export function Nav(){
             <p className="nav-countriesApp">Countries App</p>
             <ul className="nav-li">
             <li className="nav-li">
-            <Link className="nav-li nav-a home" to='/'>Home</Link>
+            <Link className="nav-li nav-a home" to='/'>Inicio</Link>
             </li>
             <li className="nav-li">
             <Link className="nav-li nav-a" to='/paises'>Paises</Link>

@@ -1,15 +1,16 @@
 import React from "react";
 import "../styles/Menu.css"
-import { getNameCountries } from '../actions';
+import { getActivities, getNameCountries } from '../actions';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCountries, filterCountriesByContinent, orderByName, filterByPopulation } from '../actions';
+import { getCountries, filterCountriesByContinent, orderByName, filterByPopulation , filterCountriesByActivities} from '../actions';
 import Card from './Card.jsx';
 import Paginado from './Paginado';
 
 export function MenuLateral(){
     const dispatch = useDispatch();
     const allCountries = useSelector((state) => state.countries);
+    const activities = useSelector((state) => state.activities);
     const[orden, setOrden] = useState ('');
     const[currentPage, setCurrentPage] = useState(1);
     const [countriesPerPage, setCountriesPerPage] = useState (9);
@@ -38,6 +39,10 @@ export function MenuLateral(){
         dispatch(getCountries());
     },[dispatch])
 
+    
+    useEffect (()=>{
+        dispatch(getActivities());
+    },[dispatch])
    
     
 
@@ -53,8 +58,10 @@ export function MenuLateral(){
 
 
     function handleFilterContinent(e) {
-        dispatch(filterCountriesByContinent(e.target.value));                                                       //va a tomar como payload el valor de cada uno de los value de las option del select
+        dispatch(filterCountriesByContinent(e.target.value)); //va a tomar como payload el valor de cada uno de los value de las option del select
     }
+
+
 
     function handleSort (e) {
         dispatch(orderByName(e.target.value));
@@ -64,6 +71,12 @@ export function MenuLateral(){
 
     function handleSortPop (e) {
         dispatch(filterByPopulation(e.target.value));
+        setCurrentPage(1); // cuando hago el ordenamiento lo hago desde la pagina 1, 
+        setOrden(`Ordenado ${e.target.value}`) // setOrden es un estado local que en un inicio va a estar vacio, para cuando seteo en la pagina 1, me modifica el estado local y renderiza
+    };
+
+    function handleActivities (e) {
+        dispatch(filterCountriesByActivities(e.target.value));
         setCurrentPage(1); // cuando hago el ordenamiento lo hago desde la pagina 1, 
         setOrden(`Ordenado ${e.target.value}`) // setOrden es un estado local que en un inicio va a estar vacio, para cuando seteo en la pagina 1, me modifica el estado local y renderiza
     };
@@ -98,7 +111,7 @@ export function MenuLateral(){
     return(
         <div>
         <div className="menu">
-
+        
         
          {/*----MENU LATERAL-----*/} 
         <div className="menudefiltros">
@@ -116,12 +129,12 @@ export function MenuLateral(){
         <div className="menu-buscador-input-cont">
             <p className="menu-title">Filtro por continente</p>
         <div>
-            <div className="menu-input"><input type = 'radio' checked={continent === 'All' ? true : false} onClick={e => onClickRadio(e)} onChange={e => handleFilterContinent(e)} value = 'All'/><p className="menu-p">TODOS LOS PAISES</p></div>
-            <div className="menu-input"><input type = 'radio' checked={continent === 'Africa' ? true : false} onClick={e => onClickRadio(e)}onChange={e => handleFilterContinent(e)} value = 'Africa'/><p className="menu-p">ÁFRICA</p></div>
-            <div className="menu-input"><input type = 'radio' checked={continent === 'Americas' ? true : false} onClick={e => onClickRadio(e)}onChange={e => handleFilterContinent(e)} value = 'Americas'/><p className="menu-p">AMÉRICA</p></div>
-            <div className="menu-input"><input type = 'radio' checked={continent === 'Asia' ? true : false} onClick={e => onClickRadio(e)}onChange={e => handleFilterContinent(e)} value = 'Asia'/><p className="menu-p">ASIA</p></div>  
-            <div className="menu-input"><input type = 'radio' checked={continent === 'Europe' ? true : false} onClick={e => onClickRadio(e)}onChange={e => handleFilterContinent(e)} value = 'Europe'/><p className="menu-p">EUROPA</p></div>   
-            <div className="menu-input"><input type = 'radio' checked={continent === 'Oceania' ? true : false} onClick={e => onClickRadio(e)}onChange={e => handleFilterContinent(e)} value = 'Oceania'/><p className="menu-p">OCEANIA</p></div>           
+            <div className="menu-input"><input type = 'radio' checked={continent === 'All' ? true : false} onClick={e => onClickRadio(e)} onChange={e => handleFilterContinent(e)} value = 'All'/><p className="menu-p">Todos los paises</p></div>
+            <div className="menu-input"><input type = 'radio' checked={continent === 'Africa' ? true : false} onClick={e => onClickRadio(e)}onChange={e => handleFilterContinent(e)} value = 'Africa'/><p className="menu-p">África</p></div>
+            <div className="menu-input"><input type = 'radio' checked={continent === 'Americas' ? true : false} onClick={e => onClickRadio(e)}onChange={e => handleFilterContinent(e)} value = 'Americas'/><p className="menu-p">América</p></div>
+            <div className="menu-input"><input type = 'radio' checked={continent === 'Asia' ? true : false} onClick={e => onClickRadio(e)}onChange={e => handleFilterContinent(e)} value = 'Asia'/><p className="menu-p">Asia</p></div>  
+            <div className="menu-input"><input type = 'radio' checked={continent === 'Europe' ? true : false} onClick={e => onClickRadio(e)}onChange={e => handleFilterContinent(e)} value = 'Europe'/><p className="menu-p">Europa</p></div>   
+            <div className="menu-input"><input type = 'radio' checked={continent === 'Oceania' ? true : false} onClick={e => onClickRadio(e)}onChange={e => handleFilterContinent(e)} value = 'Oceania'/><p className="menu-p">Oceania</p></div>           
         </div>
         </div>
 
@@ -132,7 +145,32 @@ export function MenuLateral(){
             <div className="menu-input"><input type = 'radio' value = 'desc' checked={order === 'desc' ? true : false} onClick={e => onClickRadioOrder(e)} onChange={e => handleSort(e)}/><p className="menu-p">Nombres descendente</p></div>
             <div className="menu-input"><input type = 'radio' value = 'ascpop' checked={order === 'ascpop' ? true : false} onClick={e => onClickRadioOrder(e)} onChange={e => handleSortPop(e)}/><p className="menu-p">Mayor población</p></div>  
             <div className="menu-input"><input type = 'radio' value = 'descpop'checked={order === 'descpop' ? true : false} onClick={e => onClickRadioOrder(e)}  onChange={e => handleSortPop(e)}/><p className="menu-p">Menor población</p></div>           
+            <div className="menu-input"><input type = 'radio' value = 'descpop'checked={order === 'descpop' ? true : false} onClick={e => onClickRadioOrder(e)}  onChange={e => handleSortPop(e)}/><p className="menu-p">Menor población</p></div>
         </div>
+
+
+         {/*FILTRO POR ACTIVIDAD*/}
+       {/*  <div >
+            <p className="menu-title">Filtros por actividad</p>
+        </div>
+
+       
+        
+        <div>
+            {console.log(activities)}
+      { activities.map((c) => {
+        let valor = c.nombre
+            return(
+                <li>
+                    
+                    <div className="menu-input"><input type = 'radio' value ={c.nombre} checked={order === valor ? true : false} onClick={e => onClickRadioOrder(e)}  onChange={e => handleActivities(e)}/><p className="menu-p">{c.nombre}</p></div>
+                   
+                </li>
+            )
+        })}
+        </div> */}
+
+
         </div>
         </div>
 

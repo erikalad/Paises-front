@@ -46,6 +46,13 @@ export function filterCountriesByContinent(payload) {
     }
 }
 
+export function filterCountriesByActivities(payload) {
+    return {
+        type: 'FILTER_COUNTRIES_BY_ACTIVITY',
+        payload
+    }
+}
+
 export function postActivity(payload) {
     return async function (dispatch) {
         const response = await axios.post('/activity', payload)
